@@ -10,6 +10,12 @@ namespace ScriptingAdvanceProject
     {
         public int live = 1;
         public int powerLvl = 0;
+        public int[] Posicion { get; set; }
+
+        public void Move(int[] newPosition)
+        {
+
+        }
 
         bool IsAlive()
         {

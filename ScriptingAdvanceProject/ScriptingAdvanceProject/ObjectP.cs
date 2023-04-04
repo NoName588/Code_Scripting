@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ScriptingAdvanceProject
 {
-    class ObjectP
+    public class ObjectP
     {
 
         public int powerLvl;
