@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ScriptingAdvanceProject
 {
-    abstract class Character
+    public class Character
     {
         public int live = 1;
         public int powerLvl = 0;

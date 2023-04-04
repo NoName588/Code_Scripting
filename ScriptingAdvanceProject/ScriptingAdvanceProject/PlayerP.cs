@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ScriptingAdvanceProject
 {
-    class PlayerP : Character
+    public class PlayerP : Character
     {
         ObjectP objectP = new ObjectP();
         EnemyP enemyP;
@@ -16,7 +16,7 @@ namespace ScriptingAdvanceProject
             powerLvl += objectP.powerLvl;
         }
 
-        bool CompareLvl(EnemyP enemyP)
+       public bool CompareLvl(EnemyP enemyP)
         {
             if (powerLvl >= enemyP.powerLvl)
                 return true;

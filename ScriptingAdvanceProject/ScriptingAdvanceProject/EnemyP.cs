@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ScriptingAdvanceProject
 {
-    class EnemyP : Character
+    public class EnemyP : Character
     {
         //xd
     }
