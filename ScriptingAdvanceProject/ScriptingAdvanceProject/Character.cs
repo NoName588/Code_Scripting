@@ -9,8 +9,8 @@ namespace ScriptingAdvanceProject
     public class Character
     {
         public int live = 1;
-        public int powerLvl = 0;
-        public int[] Posicion { get; set; }
+        
+        public int[] position { get; set; }
 
         public void Move(int[] newPosition)
         {

@@ -8,6 +8,7 @@ namespace ScriptingAdvanceProject
 {
     public class PlayerP : Character
     {
+        public int powerLvl = 0;
         public ObjectP objectP = new ObjectP();
         EnemyP enemyP;
 

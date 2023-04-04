@@ -6,43 +6,43 @@ using System.Threading.Tasks;
 
 namespace ScriptingAdvanceProject
 {
-    class SpaceShip
+    public class SpaceShip
     {
         int[,] size;
         int room = 0;
-        private int[,] ubicacionPersonaje;
-        private int[,] ubicacionEnemigos;
+        public int[,] locationP;
+        public int[,] locationE;
 
-        public SpaceShip(int tamano)
+        public SpaceShip(int size)
         {
-            ubicacionPersonaje = new int[tamano, tamano];
-            ubicacionEnemigos = new int[tamano, tamano];
+            locationP = new int[size, size];
+            locationE = new int[size, size];
         }
 
         void CreatingSize(int height, int width)
         {
             size = new int[height, width];
         }
-        public void ColocarPersonaje(PlayerP personaje, int[] posicion)
+        public void PutCharacter(PlayerP character, int[] position)
         {
 
-            personaje.Posicion = posicion;
-            ubicacionPersonaje[posicion[0], posicion[1]] = 1;
+            character.position = position;
+            locationP[position[0], position[1]] = 1;
         }
 
-        public void ColocarEnemigo(PlayerP enemigo, int[] posicion)
+        public void PutEnemy(PlayerP enemy, int[] position)
         {
 
-            ubicacionEnemigos[posicion[0], posicion[1]] = enemigo.powerLvl;
+            locationE[position[0], position[1]] = enemy.powerLvl;
         }
 
-        public bool VerificarEnemigo(PlayerP personaje)
+        public bool VerifyEnemy(PlayerP character)
         {
-            int vidaEnemigo = ubicacionEnemigos[personaje.Posicion[0], personaje.Posicion[1]];
-            if (vidaEnemigo > 0)
+            int P_enemy = locationE[character.position[0], character.position[1]];
+            if (P_enemy > 0)
             {
-                EnemyP enemigo = new EnemyP(vidaEnemigo);
-                return personaje.CompareLvl(enemigo);
+                EnemyP enemy = new EnemyP(P_enemy);
+                return character.CompareLvl(enemy);
             }
             return true;
         }

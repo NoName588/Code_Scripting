@@ -8,6 +8,13 @@ namespace ScriptingAdvanceProject
 {
     public class EnemyP : Character
     {
-        //xd
+        
+            public int powerLvl { get; set; }
+
+            public EnemyP(int powerLvl)
+            {
+                this.powerLvl = powerLvl;
+            }
+        
     }
 }
